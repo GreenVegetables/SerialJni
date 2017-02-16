@@ -261,7 +261,7 @@ jint name_arr[] = {115200, 57600, 38400, 19200, 9600, 4800, 2400, 1200, 300,
     LOGD("openDev==>get Serial cfg end");
 
     //***************************************
-    //����Ϊcfmakeraw(&cfg);������������
+    //以下为cfmakeraw(&cfg);函数设置内容
     //***************************************
     cfg.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL
                      | IXON);
@@ -271,7 +271,7 @@ jint name_arr[] = {115200, 57600, 38400, 19200, 9600, 4800, 2400, 1200, 300,
     cfg.c_cflag |= CS8;
 
     //***************************************
-    //����Ϊcfmakeraw(&cfg);������������
+    //以下为cfmakeraw(&cfg);函数设置内容
     //***************************************
 
     LOGD("openDev==>cfg.c_cflag %x", cfg.c_cflag);

@@ -8,7 +8,7 @@ public class SerialPortJNI {
 
 	static {
 		Log.i("NativeClass", "before load library");
-		System.loadLibrary("serialport");
+		System.loadLibrary("SerialPort");
 		Log.i("NativeClass", "after load library");
 	}
 
@@ -27,8 +27,7 @@ public class SerialPortJNI {
 
 	public native int setSpeed(FileDescriptor fd, int speed);
 
-	public native int setParity(FileDescriptor fd, int dataBits, int stopBits,
-								int parity);
+	public native int setParity(FileDescriptor fd, int dataBits, int stopBits,int parity);
 
 	public native FileDescriptor openDev(String devNum);
 
